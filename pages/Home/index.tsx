@@ -17,11 +17,11 @@ export default function Home() {
 
   useEffect(() => {
     async function verificationGetAudios() {
-      if (status && status.granted) {
+      if (status && !status.granted) {
         await requestPermission()
-      } else {
-        setAudios(await getAudios())
       }
+
+      setAudios(await getAudios())
     }
 
     verificationGetAudios().then()
