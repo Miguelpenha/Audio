@@ -1,3 +1,5 @@
+import { Audio, AVPlaybackStatus } from 'expo-av'
+
 export interface Itheme {
   name: string
   color: string
@@ -18,5 +20,16 @@ export type Inavigation = {
 
 export interface Iaudio {
   name: string
+  duration: number
   localization: string
+}
+
+interface Iplayer {
+  sound: Audio.Sound
+  status: AVPlaybackStatus
+}
+
+interface IaudioPlayed {
+  audio: Iaudio
+  player: 'default' | 'non-default'
 }

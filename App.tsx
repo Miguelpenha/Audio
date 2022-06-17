@@ -31,8 +31,9 @@ function App() {
     return (
       <ThemeProvider theme={theme === 'dark' ? dark : light}>
         <StatusBar
-          animated={true}
-          style={theme === 'dark' ? 'light' : 'dark'}
+          hideTransitionAnimation="fade"
+          style={theme === 'light' ? 'dark' : 'light'}
+          backgroundColor={theme === 'dark' ? dark.backgroundColor : light.backgroundColor}
         />
         <Routes theme={theme} setTheme={setTheme}/>
         <Toast config={toastConfig}/>

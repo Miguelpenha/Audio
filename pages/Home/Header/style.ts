@@ -2,9 +2,8 @@ import styled from 'styled-components/native'
 import { MaterialIcons } from '@expo/vector-icons'
 
 export const Container = styled.View`
-    margin-top: 7.5%;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
 `
 
 export const ContainerSettings = styled.TouchableOpacity`
