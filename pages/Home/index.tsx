@@ -10,16 +10,13 @@ import Header from './Header'
 import Menu from './Menu'
 
 export default function Home() {
-  const [status, requestPermission] = MediaLibrary.usePermissions()
   const [audios, setAudios] = useState<Iaudio[]>([])
   const [audioSelect, setAudioSelect] = useState<Iaudio>()
   const [player, setPlayer] = useState<Iplayer>()
 
   useEffect(() => {
     async function verificationGetAudios() {
-      if (status && !status.granted) {
-        await requestPermission()
-      }
+      await MediaLibrary.requestPermissionsAsync()
 
       setAudios(await getAudios())
     }
