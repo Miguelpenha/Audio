@@ -1,13 +1,15 @@
 import styled from 'styled-components/native'
+import { Dimensions } from 'react-native'
 import { RFPercentage } from 'react-native-responsive-fontsize'
 import { MaterialIcons } from '@expo/vector-icons'
+import { heightPercentageToDP } from 'react-native-responsive-screen'
 
 export const Container = styled.View`
-    top: 172%;
     z-index: 1;
     width: 90%;
-    padding: 2%; 
+    padding: ${heightPercentageToDP('0.3%')}%;
     align-self: center;
+    top: ${heightPercentageToDP('76.4%')+((Dimensions.get('window').fontScale*22)*5)}px;
     flex-direction: row;
     border-radius: ${RFPercentage(4.5)}px;
     background-color: ${props => props.theme.secondaryColor};
@@ -19,12 +21,12 @@ export const Column1 = styled.View`
 `
 
 export const AudioName = styled.Text`
-    font-size: ${RFPercentage(3.5)}px;
+    font-size: ${Dimensions.get('window').fontScale*22}px;
     color: ${props => props.theme.primary};
 `
 
 export const Duration = styled.Text`
-    font-size: ${RFPercentage(2.5)}px;
+    font-size: ${Dimensions.get('window').fontScale*18}px;
     color: ${props => props.theme.select};
 `
 

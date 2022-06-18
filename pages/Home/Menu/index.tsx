@@ -3,6 +3,8 @@ import { FC, useEffect, useState } from 'react'
 import { Container, Column1, AudioName, Duration, Column2, ContainerBack, IconBack, ContainerPlayerOrPause, IconPlayerOrPause, ContainerNext, IconNext } from './style'
 import limitText from '../../../utils/limitText'
 import convertDurationAudio from '../../../utils/convertDurationAudio'
+import { RFPercentage } from 'react-native-responsive-fontsize'
+import { Dimensions } from 'react-native'
 
 interface Iprops {
     audio: Iaudio
@@ -30,7 +32,7 @@ const Menu: FC<Iprops> = ({ audio, player }) => {
             </Column1>
             <Column2>
                 <ContainerBack>
-                    <IconBack name="fast-rewind" size={35}/>
+                    <IconBack name="fast-rewind" size={RFPercentage(5)}/>
                 </ContainerBack>
                 <ContainerPlayerOrPause onPress={async () => {
                     const status = await player.sound.getStatusAsync()
@@ -39,10 +41,10 @@ const Menu: FC<Iprops> = ({ audio, player }) => {
 
                     setIsPlaying(status.isPlaying ? false : true)
                 }}>
-                    <IconPlayerOrPause name={isPlaying ? 'pause' : 'play-arrow'} size={35}/>
+                    <IconPlayerOrPause name={isPlaying ? 'pause' : 'play-arrow'} size={RFPercentage(5)}/>
                 </ContainerPlayerOrPause>
                 <ContainerNext>
-                    <IconNext name="fast-forward" size={35}/>
+                    <IconNext name="fast-forward" size={RFPercentage(5)}/>
                 </ContainerNext>
             </Column2>
         </Container>

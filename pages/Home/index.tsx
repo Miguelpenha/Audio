@@ -20,7 +20,7 @@ export default function Home() {
 
       setAudios(await getAudios())
     }
-
+    
     verificationGetAudios().then()
   }, [])
 
@@ -30,7 +30,7 @@ export default function Home() {
 
   function renderItem({ item }: ListRenderItemInfo<Iaudio>) {
     return (
-      <AudioItem audio={item} setAudioSelect={setAudioSelect}/>
+      <AudioItem audio={item} audioSelect={audioSelect} setAudioSelect={setAudioSelect}/>
     )
   }
 
