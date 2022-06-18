@@ -8,7 +8,8 @@ async function getAudios(): Promise<Iaudio[]> {
 
     const assets = (await MediaLibrary.getAssetsAsync({
         mediaType: 'audio',
-        first: assetsTotalCount
+        first: assetsTotalCount,
+        sortBy: 'modificationTime'
     })).assets
 
     const audios: Iaudio[] = []

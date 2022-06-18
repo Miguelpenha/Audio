@@ -10,7 +10,7 @@ export const Container = styled.TouchableOpacity`
     align-self: center;
     flex-direction: row;
     border-radius: ${RFPercentage(2.5)}px;
-    background-color: ${props => props.theme.secondaryColor};
+    background-color: ${props => props.theme.secondary};
 `
 
 export const Row1 = styled.View`
@@ -23,12 +23,13 @@ export const Name = styled.Text`
 `
 
 export const Row2 = styled.View`
+    margin-top: 1%;
     flex-direction: row;
 `
 
 export const Duration = styled.Text`
     font-size: ${RFPercentage(2.5)}px;
-    color: ${props => props.theme.secondary};
+    color: ${props => props.theme.select};
 `
 
 export const Column2 = styled.View`
@@ -37,5 +38,5 @@ export const Column2 = styled.View`
 `
 
 export const IconMore = styled(MaterialIcons)`
-    color: ${props => props.theme.primary};
+    color: ${props => props.theme.select};
 `

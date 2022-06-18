@@ -2,10 +2,10 @@ import { Itheme } from './types'
 
 export const dark: Itheme = {
     name: 'dark',
-    backgroundColor: '#121212',
+    backgroundColor: '#12181c',
     backgroundColorSecondary: '#262626',
-    secondary: '#333333',
-    secondaryColor: '#c5c5c5',
+    secondary: '#262626',
+    secondaryColor: '#4c4c4c',
     primary: '#96C6EA',
     color: '#f2f2f2',
     select: '#B597F6'
@@ -13,10 +13,10 @@ export const dark: Itheme = {
 
 export const light: Itheme = {
     name: 'light',
-    backgroundColor: '#ffffff',
+    backgroundColor: '#eef5ff',
     backgroundColorSecondary: '#bfbfbf',
-    secondary: '#cccccc',
-    secondaryColor: '#797979',
+    secondary: '#33434f',
+    secondaryColor: '#64839b',
     primary: '#96C6EA',
     color: '#ffffff',
     select: '#B597F6'

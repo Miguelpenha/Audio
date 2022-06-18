@@ -8,7 +8,7 @@ function Header() {
     return <>
         <Container>
             <ContainerSettings onPress={() => navigation.navigate('Settings')}>
-                <Settings name="more-vert" size={40}/>
+                <Settings name="settings" size={40}/>
             </ContainerSettings>
         </Container>
     </>
