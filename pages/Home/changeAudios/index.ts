@@ -8,6 +8,16 @@ async function changeAudios(player: Iplayer, audioSelect: Iaudio, setPlayer: Dis
     if (player) {
         await play(player, audioSelect)
     } else {
+        Audio.setAudioModeAsync({
+            allowsRecordingIOS: false,
+            staysActiveInBackground: true,
+            interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DUCK_OTHERS,
+            playsInSilentModeIOS: true,
+            shouldDuckAndroid: true,
+            interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DUCK_OTHERS,
+            playThroughEarpieceAndroid: false
+        })
+
         const player = await Audio.Sound.createAsync({
             uri: audioSelect.localization
         })
