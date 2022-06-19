@@ -1,10 +1,10 @@
-import { Iaudio, Iplayer } from '../../../types'
-import { FC, Dispatch, SetStateAction, memo, useState, useEffect } from 'react'
+import { Iaudio } from '../../../types'
+import { Dispatch, SetStateAction, FC, memo } from 'react'
 import { Container, Column1, Row1, Name, Row2, Duration, Message, IconMessage, Column2, IconMore } from './style'
-import { TouchableOpacity } from 'react-native'
 import limitText from '../../../utils/limitText'
-import convertDurationAudio from '../../../utils/convertDurationAudio'
 import { Dimensions } from 'react-native'
+import convertDurationAudio from '../../../utils/convertDurationAudio'
+import { TouchableOpacity } from 'react-native'
 
 interface Iprops {
     audio: Iaudio

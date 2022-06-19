@@ -27,7 +27,7 @@ const Menu: FC<Iprops> = ({ audio, player }) => {
     return (
         <Container>
             <Column1>
-                <AudioName>{audio && limitText(audio.name, 14)}</AudioName>
+                <AudioName>{audio && limitText(audio.name, 13)}</AudioName>
                 <Duration>{audio && convertDurationAudio(audio.duration)}</Duration>
             </Column1>
             <Column2>
